@@ -33,8 +33,8 @@ public class App {
             // This demonstrates how to get the raw string when needed
             config.routes.get("/xml/string", ctx -> {
                 String mimeType = ContentType.APPLICATION_XML.getMimeType();
-                if (!Objects.equals(ContentType.APPLICATION_XML_STRING, mimeType)) {
-                    throw new IllegalStateException("MIME type mismatch: expected " + ContentType.APPLICATION_XML_STRING + " but was " + mimeType);
+                if (!Objects.equals(ContentType.APPLICATION_XML_MIME_TYPE, mimeType)) {
+                    throw new IllegalStateException("MIME type mismatch: expected " + ContentType.APPLICATION_XML_MIME_TYPE + " but was " + mimeType);
                 }
                 ctx.contentType(mimeType);
                 ctx.result("<data>String XML content</data>");
